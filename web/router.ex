@@ -16,6 +16,9 @@ defmodule ToyApp.Router do
   scope "/", ToyApp do
     pipe_through :browser # Use the default browser stack
 
+    resources "/users", UserController
+    resources "/microposts", MicropostController
+
     get "/", PageController, :index
   end
 
