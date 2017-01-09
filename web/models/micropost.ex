@@ -15,5 +15,6 @@ defmodule ToyApp.Micropost do
     struct
     |> cast(params, [:content])
     |> validate_required([:content])
+    |> validate_length(:content, max: 140)
   end
 end
